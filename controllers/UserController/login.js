@@ -155,6 +155,8 @@ const Login = async (req, res) => {
         process.env.JWT_SECRET
       );
 
+      console.log(token)
+
       /**
        * @description setting user in the session, we can use it to verify security check from token
        */
