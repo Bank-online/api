@@ -9,6 +9,7 @@ const payement = async (req, res) => {
    * on verifie que l'action (donner encryper est bien renseigner)
    */
   action = req.body.action;
+  console.log(action)
   try {
     const schema = yup.object().shape({
       action: yup.string().required(),
@@ -50,7 +51,7 @@ const payement = async (req, res) => {
 
     if (!dataCrediteur.length) {
       return res.status(401).json({
-        message: "payement refuser",
+        message: "payement refuser",e
       });
     }
 

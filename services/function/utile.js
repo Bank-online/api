@@ -174,10 +174,13 @@ function generatekeyApi() {
 }
 
 function decryptCard(card) {
+  
   try {
     //decriptage info front
     let front = decryptage(card, "riale-online");
+   
     front = JSON.parse(front);
+    console.log(front)
     let token = decryptage(front.id);
     /**
      * si le jwt et valide en return l'id de la carte et le montant de la transaction
