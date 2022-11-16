@@ -9,7 +9,6 @@ const payement = async (req, res) => {
    * on verifie que l'action (donner encryper est bien renseigner)
    */
   action = req.body.action;
-  console.log(action)
   try {
     const schema = yup.object().shape({
       action: yup.string().required(),
@@ -26,6 +25,8 @@ const payement = async (req, res) => {
      */
     let decrypt = decryptCard(action);
 
+    console.log(decrypt)
+
     /**
      * recuperation de la data liee a la carte
      */
@@ -35,7 +36,6 @@ const payement = async (req, res) => {
       },
     });
 
-    console.log(dataDebiter.account_uuid);
 
     /**
      * recuperation du compte pro crediteur
