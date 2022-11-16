@@ -187,7 +187,7 @@ function decryptCard(card) {
      */
     if (jwt.verify(token, process.env.JWT_SECRET)) {
 
-      console.log(jwt.decode(token).idCard)
+      console.log("debug",jwt.decode(token).idCard)
       return {
         idcard: jwt.decode(token).idCard,
         amount: parseInt(front.solde),
