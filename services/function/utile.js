@@ -180,16 +180,19 @@ function decryptCard(card) {
     let front = decryptage(card, "riale-online");
    
     front = JSON.parse(front);
-    console.log(front)
+   
     let token = decryptage(front.id);
     /**
      * si le jwt et valide en return l'id de la carte et le montant de la transaction
      */
     if (jwt.verify(token, process.env.JWT_SECRET)) {
+
+      console.log(jwt.decode(token).idCard)
       return {
         idcard: jwt.decode(token).idCard,
         amount: parseInt(front.solde),
       };
+
     }
   } catch (error) {
     return false;
