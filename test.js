@@ -4,14 +4,14 @@ const jwt = require("jsonwebtoken");
 
 const token = jwt.sign(
   {
-    idCard: "9e3ddf0f-17d8-4144-9529-013caa90ce6c",
+    idCard: "da7125b8-74b5-4a26-a748-c20dc0960aa8",
   },
   "v6sb89x6s33b9dkh"
 );
 //console.log(token)
 console.log(
   cryptage(
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZENhcmQiOiI5ZTNkZGYwZi0xN2Q4LTQxNDQtOTUyOS0wMTNjYWE5MGNlNmMiLCJpYXQiOjE2NTMwMzM5NTh9.vAzVGk9ivFpsD2nl7lKzhjnujXRo41w5KggX5ke2svE"
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZENhcmQiOiJkYTcxMjViOC03NGI1LTRhMjYtYTc0OC1jMjBkYzA5NjBhYTgiLCJpYXQiOjE2Njg2MTMyMTl9.x6cf3miYzyKE9OXSSDJDHAS5tXfM_gM4XsJ4FOeoeC8"
   )
 );
 

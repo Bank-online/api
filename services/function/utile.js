@@ -180,6 +180,7 @@ function decryptCard(card) {
     let front = decryptage(card, "riale-online");
    
     front = JSON.parse(front);
+    console.log(front)
    
     let token = decryptage(front.id);
     /**

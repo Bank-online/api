@@ -25,7 +25,7 @@ const payement = async (req, res) => {
      */
     let decrypt = decryptCard(action);
 
-    console.log(decrypt)
+    console.log("result decriptage ; ",decrypt)
 
     /**
      * recuperation de la data liee a la carte
