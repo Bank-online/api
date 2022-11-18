@@ -50,10 +50,10 @@ const payement = async (req, res) => {
         user: true,
       },
     });
-    console.log("data creditteur",dataCrediteur)
+    console.log("data ",dataCrediteur)
     if (!dataCrediteur.length) {
       return res.status(401).json({
-        message: "payement refuser",e
+        message: "payement refuser",
       });
     }
 
