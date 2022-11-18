@@ -36,6 +36,8 @@ const payement = async (req, res) => {
       },
     });
 
+    console.log("data debiteur",dataDebiter)
+
 
     /**
      * recuperation du compte pro crediteur
@@ -48,7 +50,7 @@ const payement = async (req, res) => {
         user: true,
       },
     });
-
+    console.log("data creditteur",dataCrediteur)
     if (!dataCrediteur.length) {
       return res.status(401).json({
         message: "payement refuser",e
@@ -67,6 +69,7 @@ const payement = async (req, res) => {
       req.user
     )
       .then((response) => {
+        console.log("payement accepted");
         pushNotification(
           {
             sound: "default",
@@ -80,6 +83,7 @@ const payement = async (req, res) => {
         });
       })
       .catch((e) => {
+        console.log("payement refuser");
         pushNotification(
           {
             sound: "default",
