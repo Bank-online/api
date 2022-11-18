@@ -25,8 +25,6 @@ const payement = async (req, res) => {
      */
     let decrypt = decryptCard(action);
 
-    console.log("result decriptage ; ",decrypt)
-
     /**
      * recuperation de la data liee a la carte
      */
@@ -35,8 +33,6 @@ const payement = async (req, res) => {
         uuid: decrypt.idcard,
       },
     });
-
-    console.log("data debiteur",dataDebiter)
 
 
     /**
@@ -50,7 +46,7 @@ const payement = async (req, res) => {
         user: true,
       },
     });
-    console.log("data ",dataCrediteur)
+  
     if (!dataCrediteur.length) {
       return res.status(401).json({
         message: "payement refuser",
