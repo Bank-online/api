@@ -2,16 +2,16 @@ const bcrypt = require("bcrypt");
 const { cryptage, decryptage } = require("./services/function/chifrement");
 const jwt = require("jsonwebtoken");
 
-// const token = jwt.sign(
-//   {
-//     idCard: "da7125b8-74b5-4a26-a748-c20dc0960aa8",
-//   },
-//   "v6sb89x2Gj33b9dkh"
-// );
-// console.log(token)
+const token = jwt.sign(
+  {
+    idCard: "20daed58-f675-4a6b-84cc-b0569f26ec24",
+  },
+  "v6sb89x2Gj33b9dkh"
+);
+ //console.log(token)
 console.log(
   cryptage(
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZENhcmQiOiJkYTcxMjViOC03NGI1LTRhMjYtYTc0OC1jMjBkYzA5NjBhYTgiLCJpYXQiOjE2Njg3Njk0MTB9.bXrSuFgB_AIruYA68IJeh5QJ2EUjjufyYwycUnyqbFI"
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZENhcmQiOiIyMGRhZWQ1OC1mNjc1LTRhNmItODRjYy1iMDU2OWYyNmVjMjQiLCJpYXQiOjE2NjkxMjAxNTh9.8njzW5_PYXx8qtzBpebjmyvbyKJNswG1EH21xqZB27A"
   )
 );
 
