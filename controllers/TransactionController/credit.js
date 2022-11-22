@@ -1,13 +1,14 @@
 const db = require("$db");
 
-const credit = async (req, res) => {
+const credit =  (req, res) => {
+    console.log(req.body)
 
     const { uuid , solde } = req.body;
 
 
 
 
-    await db.account.update({
+       db.account.update({
         where: {
           uuid: uuid,
         },
