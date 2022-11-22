@@ -26,7 +26,7 @@ module.exports = [
     perm: ["*"],
   },
   {
-    url: "/creditAccount/:uuid",
+    url: "/creditAccount",
     method: "post",
     func: [Controller["TransactionController@credit"]],
   
